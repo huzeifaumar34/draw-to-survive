@@ -1,0 +1,18 @@
+# Godot generated files
+.godot/
+.import/
+.export/
+# Build outputs
+build/
+*.apk
+*.aab
+# Signing material and local secrets
+*.keystore
+*.jks
+.env
+.env.*
+# Operating system / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
