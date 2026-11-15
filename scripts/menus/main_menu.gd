@@ -1,6 +1,7 @@
 extends Control
 
 const INFO_SCENE: String = "res://scenes/menus/info_screen.tscn"
+const GAME_SCENE: String = "res://scenes/gameplay/game.tscn"
 const ACCENT: Color = Color("#37D8C5")
 const BACKGROUND: Color = Color("#070B16")
 
@@ -63,7 +64,7 @@ func _build_interface() -> void:
 	footer_space.custom_minimum_size = Vector2(0, 24)
 	content.add_child(footer_space)
 
-	var footer := _make_label("VERSÃO 0.1.0  •  FASE 1", 13, Color("#72829B"))
+	var footer := _make_label("VERSÃO 0.2.0  •  FASE 2", 13, Color("#72829B"))
 	content.add_child(footer)
 
 func _make_label(value: String, font_size: int, font_color: Color) -> Label:
@@ -113,7 +114,7 @@ func _make_button(caption: String, primary: bool) -> Button:
 	return button
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file(INFO_SCENE)
+	get_tree().change_scene_to_file(GAME_SCENE)
 
 func _on_about_pressed() -> void:
 	get_tree().change_scene_to_file(INFO_SCENE)
