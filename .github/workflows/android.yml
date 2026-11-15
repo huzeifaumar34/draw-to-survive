@@ -76,6 +76,10 @@ jobs:
           godot --version
           godot --headless --editor --path . --quit
 
+      - name: Smoke-test gameplay scene
+        run: |
+          godot --headless --path . res://scenes/gameplay/game.tscn --quit-after 3
+
       - name: Export debug APK
         env:
           GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ runner.temp }}/debug.keystore

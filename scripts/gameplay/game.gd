@@ -192,7 +192,7 @@ func _add_wall(center: Vector2, dimensions: Vector2) -> void:
 func _begin_draw(position: Vector2) -> void:
 	if not _is_inside_draw_area(position):
 		return
-	if is_drawing:
+	if has_drawn or is_drawing:
 		return
 
 	is_drawing = true
